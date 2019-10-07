@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			05.09.2019
+		</title>
+	</head>
+	<body>
+		<canvas id='cnv' width='500px' height='500px' style='border:1px black solid'></canvas>
+<script>
+window.onload=function main(){
+	//Выводит типы данных
+	console.log(typeof(1));//Число
+	console.log(typeof('1'));//Строка
+	console.log(typeof(null));//Объект (пустой)
+	console.log(typeof(0));//Число
+	console.log(typeof(''));//Строка (пустая)
+	console.log(typeof({}));//Пустой объект
+	console.log(typeof([]));//Массив без значений
+	console.log(typeof(undefined));//Неопределённость
+	console.log(typeof(true));//Логическая переменная
+	console.log(typeof(main));//Фунция
+console.log('----------');
+//Сравнения
+	console.log(1=='1');//вывод сравнения, должно выдать true
+	console.log(1==='1');//вывод строгого сравнения, должно выдать false
+ 	console.log(null==undefined);//вывод сравнения
+	console.log(1<'2');//вывод сравнения (1 меньше строки '2')
+	console.log(1<'2');//вывод сравнения (1 больше 2)
+	console.log(1!=2);//вывод сравнения (1 не равно 2)
+console.log('----------');
+//Логические операции
+console.log(true||false); //(Логическое: правда + ложь(=правда))
+console.log(true&&false); //(Логическое: правда + ложь(=ложь))
+console.log(!true); //(Логическое: НЕ правда(=ложь))
+console.log('----------');
+//Оператор ветвления
+var hieght= 200;
+var min_height =120;//Задан минимальный рост в переменную
+var condition=min_height<=hieght;//В переменную записывается логическое выражение сравнения минимально и введённого роста
+if(condition){//Опреатор ветвления
+console.log('Рост больше минимального');//В фигурных скобках записаны действия в случае верности условия
+}else{//Если условие не выполнено
+console.log('Рост меньше меинимаьного');
+}
+console.log('----------');
+for(var i=0; i<10; i++){//цикл от i=0 до i=N с шагом 1
+	console.log(i*i);//вывод i^2
+}
+console.log('----------');
+//Canvas
+//Нарисуем 20 кругов
+var N=20;
+var ctx=cnv.getContext('2d');//Задаём для нашего холста двумерное пространство
+var w=cnv.width;//Получаем ширину холста
+var h=cnv.height;//Получаем высоту холста
+for(var i=0; i<N;i++){//цикл от i=0 до i=N с шагом 1
+ctx.beginPath();//
+ctx.arc(i*10,250,30,0,2*Math.PI);//3 строки для вывода кругов с задаными параметрами, центр зависит от i/Аргументы: x,y,r,начало сектора, конец сектора(для целого круга 0, 2Pi)
+ctx.stroke();//
+}
+//Массивы
+console.log('----------');
+var drinks=['water','milk','coffee','vine','juice'];//Задаём массив со значенями в кадратных скобках
+console.log(drinks)//Выводим в консоль массив
+console.log(drinks.length);//Вывод количества элементов
+console.log(drinks[1]);//вывод первого элемента (нумерация с нуля)
+drinks[4]='tea';//Заменить четвертый элмент на чай
+console.log(drinks);//Выводим в консоль массив
+drinks.push('juice');//Добавить 6 элемент - сок
+console.log(drinks);//Выводим в консоль массив
+//
+console.log('----------');
+var a =[];
+for(var i=0;i<10;i++){
+	a.push(i*i);
+	console.log(a[i]);
+}
+console.log(a);//Выводим в консоль массив
+console.log('----------');
+//
+function isEven(x){//Вводим фунцкцию, которую можно вызвать извне 
+	var result = (x%2)==0;//Равен ли остаток от деления х на 2 нулю?
+	return result;//выводим логический резултат
+}
+console.log(isEven(1));//Вызываем фунцию,задав x=1
+console.log(isEven(6));//Вызываем фунцию,задав x=6
+}
+</script>	
+	</body>	
+</html>

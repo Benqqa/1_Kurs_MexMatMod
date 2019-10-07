@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			05.09.2019
+		</title>
+	</head>
+	<body>
+		<canvas id='cnv' width='500px' height='500px' style='border:1px black solid'></canvas>
+<script>
+window.onload=function main(){
+//Canvas
+//Нарисуем 20 кругов
+var t_max=2*Math.PI;
+var ctx=cnv.getContext('2d');//Задаём для нашего холста двумерное пространство
+var w=cnv.width;//Получаем ширину холста
+var h=cnv.height;//Получаем высоту холста
+var dt=0.05;
+a=100;
+b=200;
+for(var t=0; t<t_max;t+=dt){//цикл от t=0 до t=t_max с шагом dt
+ctx.beginPath();//
+ctx.arc(w/2+a*Math.cos(t),h/2-b*Math.sin(t),5,0,2*Math.PI);//Выводим функцию
+ctx.stroke();//
+}
+
+
+
+}
+</script>	
+	</body>	
+</html>
