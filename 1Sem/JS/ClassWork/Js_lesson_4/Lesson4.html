@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Урок 4</title>
+</head>
+<body>
+    <canvas id = "artist" width = 600 height = 600 style='border: 1px  solid #000000'></canvas>
+        <script>
+                window.addEventListener('load', main, false)
+                function main(){
+                    let ctx = artist.getContext('2d')
+                    let w = artist.width;
+                    let h = artist.height;
+                    let x_min = 0;
+                    let x_max = 10*Math.PI;
+                    let x_scale = w/(x_max-x_min);
+                    let y_scale = h/2;
+                    
+                    function drawAxis(){
+                        ctx.beginPath();
+                        ctx.moveTo(0, h/2);                                             //создание СК
+                        ctx.lineTo(w, h/2);
+                        ctx.stroke();
+
+                       
+                    }
+
+                    function drawPlot(x,y){
+                        ctx.beginPath();
+                        for(i=0; i<x.length-1; i++){
+                            
+                            ctx.moveTo(x_scale*x[i], h/2-y_scale*y[i]);                     //функция которая строит по точкам
+                            ctx.lineTo(x_scale*x[i+1], h/2-y_scale*y[i+1]);
+                            
+                        }
+                        ctx.stroke();
+                        
+                    }
+
+                    function f(x) {
+                        return Math.sin(x)*Math.exp(x/x_max);               //сама функция
+                    }
+                    var x=[];
+                    let y=[];
+                   
+                    let N = 100;
+
+                    let dx = (x_max-x_min)/N;
+                    // for (i=0; i<N; i++) {
+                    //     x.push(x_cur);
+                    //     y.push(f(x_cur));
+                    //     x_cur+=dx;
+                    //}
+                    y_max = 0;
+                    for( let i=0; i<=N; i++) {
+                        x.push(x_min+i*dx);                         //создание массивов точек, по которым будет строить
+                        y.push(f(x[i]));
+                        if(y_max < Math.abs(y[i])){
+                            y_max = Math.abs(y[i]);
+                            y_scale = h/(2*y_max);                  //масштабирование по Y
+                        }
+                    }
+                    drawAxis();
+                    drawPlot(x,y);
+                }
+        </script>
+</body>
+</html>
