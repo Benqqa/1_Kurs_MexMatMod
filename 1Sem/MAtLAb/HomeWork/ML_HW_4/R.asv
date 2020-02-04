@@ -1,0 +1,5 @@
+function Y = Y(x)
+Y = (x^2+1)/(x+2)
+end
+
+
