@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+<script> 
+//списки
+function Node(value)
+{
+	this.value=value;
+	this.next=null;
+}
+
+function SingleList()
+{
+this.head=null;
+this.length=0;
+var that= this;
+
+	this.add=function(value)//функция на добавление элементов
+	{ 
+	var node=new Node(value);
+		if(that.head==null)
+		{
+			that.head=node;
+		}
+	else
+	{
+var element_i=that.head;
+while(element_i.next!=null)
+{
+console.log(element_i);
+
+element_i=element_i.next;
+}
+element_i.next=node;
+}
+that.length++;
+}
+this.log=function()
+{
+var str='[';
+var element_i=that.head;
+while(element_i!=null)
+{
+str+=element_i.value;
+str+=' ';
+element_i=element_i.next;
+}
+str+=']'
+console.log('SingleList\nLength'+that.length+'\nElements'+str)
+
+}
+this.insert=function(value,i)
+{
+if((i<0)||(i>that.length))
+{
+console.error('wrong index')
+return;
+}
+var node=new Node(value)
+if(i==0)
+{
+node.next=that.head;
+that.head=node;
+}
+else{
+var element_i=that.head;
+for(var j=0; j<i-1;j++)
+{
+element_i=element_i.next;
+
+}
+node.next=element_i.next;
+element_i.next=node;
+
+}
+that.length++;
+}
+this.remove= function(i)
+{
+if((i<0)||(i>that.length))
+{
+console.error('wrong index')
+return;
+}
+if(i==0)
+{
+that.head=that.head.next;
+
+}
+else
+{
+var element_i=that.head;
+for(var j=0;j<i-1;j++)
+{
+element_i=element_i.next;
+
+}
+element_i.next=element_i.next.next;
+}
+that.length--;
+}
+this.indexOf=function(value)
+{
+var i=0;
+var element_i=that.head;
+while(element_i.value!=value)
+{
+element_i=element_i.next
+i++;
+if( element_i==null)
+{
+return -1;
+}
+}
+return i;
+}
+}
+
+var sl=new SingleList();
+
+for(var i=0;i<5;i++)
+{
+sl.add(i);
+}
+sl.insert(20,5);
+sl.remove(1);
+sl.log();
+console.log(sl.indexOf(4));
+</script>
+</body>
