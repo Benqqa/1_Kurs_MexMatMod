@@ -1,0 +1,321 @@
+body {
+    background: #edba5d url(bg1.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+	
+}
+
+canvas {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
+    border-radius: 20px;
+    background: url(phon.png);
+}
+
+
+#output {
+  color: black;
+  font-size: 72px;
+  font-family: sans-serif; 
+  display: block;
+ 
+  }
+
+#slider1 {
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+    opacity:1%;
+
+  width: 100%; 
+  
+  }
+  #slider2 {
+  position: absolute;
+  top: 0px;
+  height: 10px;
+  left: 0;
+  background-color: red;
+  opacity:0;
+  width: 100%; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#butt{
+    font-size: 50px;
+    text-align: center;
+   // width: 420px;
+    height: 100px;
+    color: white;
+    /* background:url('d4-01.png'); */
+    border-radius: 100px;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    position: fixed;
+    top: 70px;
+    right: 270px;
+    animation: radial-pulse 1s infinite;
+}
+ .buttons {
+	 font-size: 13px;
+	 color: white;
+	 text-align: center;
+	 width:180px;
+     height: 30px;
+	 border-radius: 10px;
+	 position: fixed;
+	 margin-left: 1vw;
+	 margin-top: 1vw;
+     border-color: #FDBE33 #ccc #D77206;
+	 background: linear-gradient(#F3AE0F, #E38916) #E38916;
+	 /* float:center; */
+ }
+ 
+ .r_b{
+	color: #333333;
+	text-align: center;
+	font: 12pt/10pt sans-serif;
+	position: fixed;
+   margin-top:5vh;
+ }
+
+
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked), 
+input[type="radio"]:checked, 
+input[type="radio"]:not(:checked) 
+{
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label, 
+input[type="radio"]:checked + label, 
+input[type="radio"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 2px;
+}
+
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    border-radius: 100%;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after, 
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #ff0000;
+    border-bottom: 4px solid #ff0000;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #ff0000;
+}
+
+input[type="checkbox"]:not(:checked) + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+
+#cp img {
+    position: fixed;
+    top: 250px;
+    right: 280px;
+    width: 330px;
+    height: 330px;
+}
+
+#cd img {
+ 
+    float: right;
+    /* Выравнивание по левому краю */
+    margin: 150px 0px 10px 100px;
+    /* Отступы вокруг картинки */
+}
+
+#cd .monkey {
+    width: 150px;
+    height: 150px;
+    float: right;
+    /* Выравнивание по левому краю */
+    position: absolute;
+    top: 350px;
+    right: 100px
+}
+
+.monkey1 {
+    width: 150px;
+    height: 180px;
+    margin-top: 20px;
+    float: right;
+    /* Выравнивание по левому краю */
+    position: absolute;
+    top: 350px;
+    right: 100px
+}
+
+#cf img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    /* Выравнивание по левому краю */
+    margin: 10px 0px 10px 100px;
+    /* Отступы вокруг картинки */
+    animation: around 0.8s linear 0s infinite;
+}
+
+.comment {
+	
+    max-width: 540px;
+    flex-basis: 50%;
+    margin-left: 50px;
+    margin-top: 200px;
+    padding-left: 400px;
+}
+
+/* .comment_text {
+font:myriad;
+}
+ */
+.comment_bubble {
+	
+    position: fixed;
+    top: 70px;
+    right: 550px;
+    padding: 15px;
+    max-width: 250px;
+    background: #ebebeb;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.comment_bubble:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 25px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-right: 13px solid #ebebeb;
+    border-bottom: 12px solid transparent;
+}
+
+@keyframes around {
+    0% {
+        left: 10px;
+        top: 350px;
+    }
+    50% {
+        left: 10px;
+        top: 300px;
+    }
+    100% {
+        left: 10px;
+        top: 350px;
+    }
+}
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+        width: 420px;
+        height: 100px
+    }
+    50% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+        width: 430px;
+        height: 105px
+    }
+    100% {
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+        width: 420px;
+        height: 100px
+    }
+}
+

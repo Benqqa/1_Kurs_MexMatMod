@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset='utf-8'>
+    <title>Морской бой</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+   
+    <!--<script type="text/javascript" src="gifffer.js"></script>-->
+
+
+
+</head>
+
+<body>
+
+    <br></br>
+	<div id="slider1"></div>
+    <div align='center'>
+	<div id="slider2"></div>
+  <span id="output">0</span>
+  
+  <script src="index.js"></script>
+        <table>
+		
+            <tr>
+			
+                <td>
+                    <canvas id="field1" width='300' height='300' style="background-color:#ffffff; border: 3px solid #090974"></canvas>
+                </td>
+                <td>
+					<img class="muss" width='50' height='50' src="mus.png" id="mus" ><br>
+
+					<img class="monkey" width='200' height='100' src="dynamite.png"><br>
+                    <input type="button" class=buttons id="btnAdd" value="Изменить положение" ><br>
+                    <input type="button" class=buttons id="btnPlay" value="Старт" style="margin-top: 5vh;"><br>
+					<div class="r_b">
+						<h3>Уровень сложности</h3>
+						
+						<div class="rb">
+						<input name="rb" type="radio" id="rb1" checked>
+						<label for="rb1"><b>1</b></label>
+						<input name="rb" type="radio" id="rb2" checked>
+						<label for="rb2"><b>2</b></label>
+						<input name="rb" type="radio" id="rb3" checked>
+						<label for="rb3"><b>3</b></label>
+					</div>
+						               
+
+					</div>	
+
+					</td>
+                <td>
+                    <canvas id="field2" width='300' height='300' style="background-color:#ffffff; border: 3px solid #FF0000"></canvas>
+                </td>
+            </tr>
+        </table>
+		
+        <div id="cf">
+            <img class="monkey" id="o2p" src="обезьяна2-01.png" style="display: flex;">
+            <img class="monkey" id="o2g" src="panic2.gif" style="display: none;">
+            <img class="monkey" id="o2g2" src="happiness2.gif" style="display: none;">
+        </div>
+        <div id="cd">
+            <img class="monkey" id="o1g" src="panic1.gif" style="display: none;">
+            <img class="monkey" id="o1p" src="1.png" style="display: flex;">
+            <img class="monkey" id="o1g2" src="happiness1.gif" style="display: none;">
+        </div>
+    </div>
+ <script src="script1.js"></script>
+    <script src="Pole.js"></script>
+</body>
+
+</html>
